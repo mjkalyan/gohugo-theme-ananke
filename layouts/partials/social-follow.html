@@ -72,3 +72,21 @@
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
+{{ with .Param "matrix" }}
+<a href="{{ . }}" target="_blank" class="link-transition matrix link dib z-999 pt3 pt0-l mr1" title="Join my Matrix chat room!" rel="noopener" aria-label="follow on Matrix——Opens in a new window">
+  {{ partial "svg/matrix.svg" (dict "size" $icon_size) }}
+  {{- partial "new-window-icon.html" . -}}
+</a>
+{{ end }}
+{{ with .Param "discord" }}
+<a href="{{ . }}" target="_blank" class="link-transition discord link dib z-999 pt3 pt0-l mr1" title="Join my Discord chat room!" rel="noopener" aria-label="follow on Discord——Opens in a new window">
+  {{ partial "svg/discord.svg" (dict "size" $icon_size) }}
+  {{- partial "new-window-icon.html" . -}}
+</a>
+{{ end }}
+{{ with .Param "email" }}
+<a href="{{ . }}" target="_blank" class="link-transition email link dib z-999 pt3 pt0-l mr1" title="Shoot me an Email!" rel="noopener" aria-label="Email me——Opens in a new window">
+  {{ partial "svg/email.svg" (dict "size" $icon_size) }}
+  {{- partial "new-window-icon.html" . -}}
+</a>
+{{ end }}
