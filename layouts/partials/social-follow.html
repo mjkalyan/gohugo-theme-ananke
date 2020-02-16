@@ -24,12 +24,6 @@
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
-{{ with .Param "youtube" }}
-<a href="{{ . }}" target="_blank" class="link-transition youtube link dib z-999 pt3 pt0-l mr1" title="Youtube link" rel="noopener" aria-label="follow on Youtube——Opens in a new window">
-  {{ partial "svg/youtube.svg" (dict "size" $icon_size) }}
-  {{- partial "new-window-icon.html" . -}}
-</a>
-{{ end }}
 {{ with .Param "linkedin" }}
 <a href="{{ . }}" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
   {{ partial "svg/linkedin.svg" (dict "size" $icon_size) }}
@@ -81,6 +75,18 @@
 {{ with .Param "discord" }}
 <a href="{{ . }}" target="_blank" class="link-transition discord link dib z-999 pt3 pt0-l mr1" title="Join my Discord chat room!" rel="noopener" aria-label="follow on Discord——Opens in a new window">
   {{ partial "svg/discord.svg" (dict "size" $icon_size) }}
+  {{- partial "new-window-icon.html" . -}}
+</a>
+{{ end }}
+{{ with .Param "lbry" }}
+<a href="{{ . }}" target="_blank" class="link-transition lbry link dib z-999 pt3 pt0-l mr1" title="Find my videos on LBRY!" rel="noopener" aria-label="follow on LBRY——Opens in a new window">
+  {{ partial "svg/lbry.svg" (dict "size" $icon_size) }}
+  {{- partial "new-window-icon.html" . -}}
+</a>
+{{ end }}
+{{ with .Param "youtube" }}
+<a href="{{ . }}" target="_blank" class="link-transition youtube link dib z-999 pt3 pt0-l mr1" title="Find my videos on YouTube!" rel="noopener" aria-label="follow on Youtube——Opens in a new window">
+  {{ partial "svg/youtube.svg" (dict "size" $icon_size) }}
   {{- partial "new-window-icon.html" . -}}
 </a>
 {{ end }}
